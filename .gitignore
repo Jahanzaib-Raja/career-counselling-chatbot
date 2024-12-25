@@ -1,9 +1,9 @@
 # Frontend (Next.js project)
-frontend/career-counceling-bot/node_modules/
-frontend/career-counceling-bot/.next/
-frontend/career-counceling-bot/out/
-frontend/career-counceling-bot/.env.local
-frontend/career-counceling-bot/.env
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env.local
+frontend/.env
 
 # Backend (Python project)
 backend/__pycache__/
