@@ -15,7 +15,9 @@ export default function ChatPage() {
   ];
 
   useEffect(() => {
-    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messageEndRef.current) {
+      messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [messages]);
 
   const sendMessage = async (predefinedMessage) => {
@@ -26,13 +28,16 @@ export default function ChatPage() {
     setMessage(""); // Clear the input
     setLoading(true);
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/chat`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message: userMessage }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/chat`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message: userMessage }),
+        }
+      );
 
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
@@ -166,6 +171,5 @@ function formatText(inputText) {
   inputText = inputText.replace(/\n/g, "");
   inputText = inputText.replace(/```html/g, "");
   inputText = inputText.replace(/```/g, "");
-
   return inputText;
 }
