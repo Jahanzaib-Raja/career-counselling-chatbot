@@ -1,0 +1,22 @@
+# Frontend (Next.js project)
+frontend/career-counceling-bot/node_modules/
+frontend/career-counceling-bot/.next/
+frontend/career-counceling-bot/out/
+frontend/career-counceling-bot/.env.local
+frontend/career-counceling-bot/.env
+
+# Backend (Python project)
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/venv/
+backend/.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
