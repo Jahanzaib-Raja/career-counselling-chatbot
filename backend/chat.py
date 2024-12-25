@@ -16,6 +16,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 origins = [
     "http://localhost:3000",
+    "https://careercouncelling-production.up.railway.app",
 ]
 # Initialize the OpenAI client
 client = OpenAI(
