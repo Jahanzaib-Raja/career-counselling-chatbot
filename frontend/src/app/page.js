@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import logo from "@/assets/logo/logolightt.png";
+import logo from "@/assets/logo/logoLight.png";
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -79,18 +79,15 @@ export default function ChatPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white shadow-md flex items-center justify-between gap-6">
         <div className="flex flex-col items-start">
-          <h1 className="text-2xl font-semibold md:text-3xl">Career Chatbot</h1>
+          <h1 className="text-2xl font-semibold md:text-3xl">
+            Career Counselling Bot
+          </h1>
           <p className="mt-1 text-sm opacity-80 md:text-base">
             Your guide to a brighter professional future.
           </p>
         </div>
         <div>
-          <Image
-            src={logo.src}
-            alt="Logo"
-            width={90} 
-            height={80} 
-          />
+          <Image src={logo.src} alt="Logo" width={90} height={80} />
         </div>
       </header>
 
