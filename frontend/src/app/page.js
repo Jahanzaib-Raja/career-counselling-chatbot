@@ -11,7 +11,7 @@ export default function ChatPage() {
 
   // Predefined templates
   const templates = [
-    "How can I start a career in software development?",
+    "What are some tips for changing careers later in life?",
     "What are the best career options after a marketing degree?",
     "How can I improve my chances of getting a job in data science?",
   ];
@@ -79,17 +79,24 @@ export default function ChatPage() {
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white shadow-md flex items-center justify-between gap-6">
         <div className="flex flex-col items-start">
-          <h1 className="text-2xl font-semibold md:text-3xl">
-            Career Counselling Bot
+          <h1 className="text-[22px] font-semibold md:text-3xl">
+            Career Counselling
           </h1>
-          <p className="mt-1 text-sm opacity-80 md:text-base">
-            Your guide to a brighter professional future.
+          <p className="mt-1 text-xs opacity-80 md:text-base">
+            Your <strong className="text-[12px]">AI-powered</strong> guide to a
+            brighter professional future.
           </p>
         </div>
         <div>
           <Image src={logo.src} alt="Logo" width={90} height={80} />
         </div>
       </header>
+      <div className="mt-2 mx-2 text-xs text-gray-600 text-center bg-yellow-100 border-l-4 border-yellow-500 p-2 rounded-md">
+        <p>
+          <strong>Notice:</strong> The Chatbot is currently in beta and may
+          provide inaccurate advice as it is still learning.
+        </p>
+      </div>
 
       {messages?.length === 0 && (
         <div className="p-4">
