@@ -91,7 +91,10 @@ export default function ChatPage() {
           <Image src={logo.src} alt="Logo" width={90} height={80} />
         </div>
       </header>
-      <div className="mt-2 mx-2 text-xs text-gray-600 text-center bg-yellow-100 border-l-4 border-yellow-500 p-2 rounded-md">
+      <div
+        className="max-w-fit mt-2 mx-2 md:mx-auto text-xs text-gray-600 text-center bg-yellow-100 border-l-4 border-yellow-500 p-2 rounded-md"
+        role="alert"
+      >
         <p>
           <strong>Notice:</strong> The Chatbot is currently in beta and may
           provide inaccurate advice as it is still learning.
